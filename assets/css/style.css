@@ -17,8 +17,8 @@
   --container-color: hsl(228, 6%, 12%);
   --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4);
   --gradient-card: linear-gradient(180deg,
-                                hsla(93, 8%, 8%),
-                                hsla(93, 40%, 30%));
+      hsla(93, 8%, 8%),
+      hsla(93, 40%, 30%));
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -70,7 +70,10 @@ body {
   color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
@@ -116,7 +119,7 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header{
+.header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -125,7 +128,7 @@ img {
   z-index: var(--z-fixed);
 }
 
-.nav{
+.nav {
   position: relative;
   height: var(--header-height);
   display: flex;
@@ -136,33 +139,33 @@ img {
 .nav__logo,
 .nav__close,
 .nav__toggle,
-.nav__actions{
+.nav__actions {
   display: flex;
   color: var(--title-color);
   cursor: pointer;
 }
 
-.nav__logo{
+.nav__logo {
   font-weight: var(--font-semi-bold);
   column-gap: .25rem;
   align-items: center;
 }
 
-.nav__logo i{
+.nav__logo i {
   color: var(--first-color);
   font-size: 1.25rem;
   font-weight: initial;
 }
 
-.nav__actions{
+.nav__actions {
   font-size: 1.25rem;
   column-gap: .5rem;
   align-items: center;
 }
 
 /* Navigation for mobile devices */
-@media screen and (max-width: 1150px){
-  .nav__menu{
+@media screen and (max-width: 1150px) {
+  .nav__menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -176,23 +179,23 @@ img {
   }
 }
 
-.nav__list{
+.nav__list {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
 }
 
-.nav__link{
+.nav__link {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   transition: color .4s;
 }
 
-.nav__link:hover{
+.nav__link:hover {
   color: var(--first-color)
 }
 
-.nav__close{
+.nav__close {
   position: absolute;
   top: 1.1rem;
   right: 1.5em;
@@ -200,12 +203,12 @@ img {
 }
 
 /* Show menu */
-.show-menu{
+.show-menu {
   right: 0;
 }
 
 /* Add blur header */
-.blur-header::after{
+.blur-header::after {
   content: '';
   position: absolute;
   width: 1000%;
@@ -222,36 +225,36 @@ img {
 
 
 /*=============== HOME ===============*/
-.home__container{
+.home__container {
   padding-top: 2.5rem;
   row-gap: 2rem;
 }
 
-.home__img{
+.home__img {
   width: 350px;
   filter: drop-shadow(var(--shadow-img));
   justify-self: center;
 }
 
-.home__data{
+.home__data {
   text-align: center;
 }
 
-.home__title{
+.home__title {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-bold);
   margin-bottom: 1rem;
 }
 
-.home__title span{
+.home__title span {
   color: var(--first-color);
 }
 
-.home__description{
+.home__description {
   margin-bottom: 3rem;
 }
 
-.home__buttons{
+.home__buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,7 +262,7 @@ img {
 }
 
 /*=============== BUTTON ===============*/
-.button{
+.button {
   background-color: var(--white-color);
   color: var(--black-color);
   font-weight: var(--font-bold);
@@ -270,7 +273,7 @@ img {
   border-radius: 4rem;
 }
 
-.button span{
+.button span {
   background-color: var(--first-color);
   padding: .5rem;
   font-size: 1.25rem;
@@ -280,34 +283,35 @@ img {
   transition: transform .4s;
 }
 
-.button:hover span{
+.button:hover span {
   transform: translateX(.5rem) rotate(-30deg);
 }
 
-.button__link{
+.button__link {
   color: var(--white-color);
   font-weight: var(--font-bold);
   text-decoration: underline;
   transition: color .4s;
 }
 
-.button__link:hover{
+.button__link:hover {
   color: var(--first-color)
 }
+
 /*=============== GALLERY ===============*/
-.gallery__data{
+.gallery__data {
   text-align: center;
 }
 
-.gallery__container{
+.gallery__container {
   row-gap: 7.5rem;
 }
 
-.gallery__content{
+.gallery__content {
   row-gap: 3rem;
 }
 
-.gallery__card{
+.gallery__card {
   position: relative;
   width: 200px;
   background: var(--gradient-card);
@@ -316,7 +320,7 @@ img {
   border-radius: 1.5rem;
 }
 
-.gallery__img{
+.gallery__img {
   position: absolute;
   top: -3rem;
   left: 0;
@@ -326,20 +330,79 @@ img {
   transition: transform .4s;
 }
 
-.gallery__title{
+.gallery__title {
   font-size: var(--h2-font-size);
   text-align: center;
 }
 
-.gallery__card:nth-child(odd){
+.gallery__card:nth-child(odd) {
   rotate: -5deg;
 }
 
-.gallery__card:nth-child(even){
+.gallery__card:nth-child(even) {
   justify-self: flex-end;
   rotate: 5deg;
 }
 
-.gallery__card:hover .gallery__img{
+.gallery__card:hover .gallery__img {
+  transform: translateY(-.5rem);
+}
+
+/*=============== SHOP ===============*/
+.shop__container {
+  padding-top: 6.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem 1.5rem;
+}
+
+.shop__card {
+  position: relative;
+  background: var(--gradient-card);
+  padding: 5.75rem .75rem 1.25rem .75rem;
+  border: 2px solid var(--first-color-light);
+  border-radius: 1rem;
+}
+
+.shop__img {
+  position: absolute;
+  top: -4.5em;
+  left: 0;
+  right: 0;
+  width: 130px;
+  margin: 0;
+  transition: transform .4s;
+}
+
+.shop__title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: .3rem;
+}
+
+.shop__description {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-regular);
+  margin-bottom: 1rem;
+}
+
+.shop__price {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.shop__button {
+  position: absolute;
+  right: .75rem;
+  bottom: 0.75rem;
+  outline: none;
+  border: none;
+  background-color: var(--white-color);
+  padding: 6px;
+  border-radius: 50%;
+  display: grid;
+  cursor: pointer;
+}
+
+.shop__card:hover .shop__img {
   transform: translateY(-.5rem);
 }
