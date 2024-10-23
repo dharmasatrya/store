@@ -406,3 +406,31 @@ img {
 .shop__card:hover .shop__img {
   transform: translateY(-.5rem);
 }
+
+/*=============== ABOUT US ===============*/
+.about__container{
+  padding-top: 2rem;
+  row-gap: 2rem;
+}
+
+.about__img{
+  width: 280px;
+  filter: drop-shadow(var(--shadow-img));
+  justify-self: center;
+}
+
+.about__list{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.about__item{
+  display: flex;
+  column-gap: .5rem;
+  align-items: flex-start;
+}
+
+.about__item i{
+  font-size: 1.5rem;
+  color: var(--first-color)
+}
