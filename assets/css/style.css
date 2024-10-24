@@ -747,6 +747,93 @@ img {
   background-color: var(--first-color-alt);
 }
 
+/*=============== LOGIN ===============*/
+.login {
+  padding: 4rem 0;
+  background: var(--gradient-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__container {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login__title {
+  font-size: 1.75rem;
+  color: var(--first-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__label {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.login__input {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--first-color-light);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.login__input:focus {
+  outline: none;
+  border-color: var(--first-color);
+  box-shadow: 0 0 5px var(--first-color);
+}
+
+.login__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__button {
+  padding: 0.75rem 1.5rem;
+  background: var(--first-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login__button:hover {
+  background: var(--first-color-alt);
+}
+
+.login__forgot {
+  color: var(--first-color-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
