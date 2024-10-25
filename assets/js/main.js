@@ -156,3 +156,14 @@ document.getElementById('close-popup').onclick = function () {
     document.getElementById('item-popup').style.display = 'none';
     document.getElementById('caseItems').style.display = 'none';
 };
+
+/*=============== SCROLL REVEAL ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2500,
+    delay: 300,
+    reset: true,
+})
+
+sr.reveal('.home__img')

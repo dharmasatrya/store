@@ -224,14 +224,14 @@
                 <h2 class="section__title">Subscribe ke ramalan bulanan kami</h2>
                 <p class="section__subtitle">Dapatkan ramalan pribadi setiap bulannya!</p>
 
-                <form class="newsletter__form">
+                <form class="newsletter__form" action="newsletter.php" method="post">
                     <div class="newsletter__input-group">
-                        <input type="text" placeholder="Nama bepan" class="newsletter__input" required>
-                        <input type="text" placeholder="Nama belakang" class="newsletter__input" required>
+                        <input type="text" placeholder="Nama bepan" class="newsletter__input" name="first_name"required>
+                        <input type="text" placeholder="Nama belakang" class="newsletter__input" name="last_name" required>
                     </div>
-                    <input type="email" placeholder="Email" class="newsletter__input" required>
-                    <input type="date" placeholder="Tanggal lahir" class="newsletter__input" required>
-                    <input type="text" placeholder="Berikan tentang ramalan yang diinginkan" class="newsletter__input" style="height: 6rem;">
+                    <input type="email" placeholder="Email" name="email" class="newsletter__input" required>
+                    <input type="date" placeholder="Tanggal lahir" name="dob" class="newsletter__input" required>
+                    <input type="text" placeholder="Berikan tentang ramalan yang diinginkan" name="info" class="newsletter__input" style="height: 6rem;">
                     <button type="submit" class="button">Subscribe</button>
                 </form>
             </div>
@@ -397,7 +397,7 @@
     </a>
 
     <!--=============== SCROLLREVEAL ===============-->
-    <script src=""></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
